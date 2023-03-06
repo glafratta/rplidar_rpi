@@ -55,3 +55,6 @@ target_link_libraries(printRPM a1lidarrpi)
 
 add_executable (pwm pwm.cpp)
 target_link_libraries(pwm pigpio rt ${CMAKE_THREAD_LIBS_INIT})
+
+add_executable(printOneScan printOneScan.cpp)
+target_link_libraries(printOneScan a1lidarrpi)
