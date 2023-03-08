@@ -29,7 +29,7 @@ public:
 		printf("writing to %s\n", fileName);
 		for(A1LidarData &data: data) {
 			if (data.valid){
-			fprintf(f,"%.2f\t%.2f\n",data.x,data.y);
+			fprintf(f,"%.3f\t%.3f\n",data.x,data.y);
 		//		o<<data.x<<"\t"<<data.y<<"\n"<<std::flush;
 		}
 			//else{
@@ -42,7 +42,7 @@ public:
 };
 
 int main(int, char **) {
-	fprintf(stderr,"prints x, y coordinates approximated to the second decimal\n");
+	fprintf(stderr,"prints x, y coordinates approximated to the third decimal\n");
 	A1Lidar lidar;
 	DataInterface dataInterface;
 	dataInterface.__init__();
